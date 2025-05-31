@@ -63,48 +63,62 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Business vertical colors
+				// Brand colors based on the logo
+				brand: {
+					50: '#fdf8f6',
+					100: '#f2e8e5',
+					200: '#eaddd7',
+					300: '#e0cec7',
+					400: '#d2bab0',
+					500: '#c69c7e',
+					600: '#a1665e',
+					700: '#8b4513',
+					800: '#7a2d0f',
+					900: '#4a1f0d',
+					950: '#2d130a'
+				},
+				// Business vertical colors using brand variations
 				solar: {
-					50: '#fff7ed',
-					100: '#ffedd5',
-					500: '#f97316',
-					600: '#ea580c',
-					700: '#c2410c'
+					50: '#fdf8f6',
+					100: '#f2e8e5',
+					500: '#c69c7e',
+					600: '#a1665e',
+					700: '#8b4513'
 				},
 				gold: {
-					50: '#fffbeb',
-					100: '#fef3c7',
-					500: '#f59e0b',
-					600: '#d97706',
-					700: '#b45309'
+					50: '#fdf8f6',
+					100: '#f2e8e5',
+					500: '#d2bab0',
+					600: '#c69c7e',
+					700: '#a1665e'
 				},
 				builder: {
-					50: '#f8fafc',
-					100: '#f1f5f9',
-					500: '#64748b',
-					600: '#475569',
-					700: '#334155'
+					50: '#fdf8f6',
+					100: '#f2e8e5',
+					500: '#8b4513',
+					600: '#7a2d0f',
+					700: '#4a1f0d'
 				},
 				restaurant: {
-					50: '#fdf2f8',
-					100: '#fce7f3',
-					500: '#ec4899',
-					600: '#db2777',
-					700: '#be185d'
+					50: '#fdf8f6',
+					100: '#f2e8e5',
+					500: '#a1665e',
+					600: '#8b4513',
+					700: '#7a2d0f'
 				},
 				electronics: {
-					50: '#eff6ff',
-					100: '#dbeafe',
-					500: '#3b82f6',
-					600: '#2563eb',
-					700: '#1d4ed8'
+					50: '#fdf8f6',
+					100: '#f2e8e5',
+					500: '#7a2d0f',
+					600: '#4a1f0d',
+					700: '#2d130a'
 				},
 				eco: {
-					50: '#f0fdf4',
-					100: '#dcfce7',
-					500: '#22c55e',
-					600: '#16a34a',
-					700: '#15803d'
+					50: '#fdf8f6',
+					100: '#f2e8e5',
+					500: '#c69c7e',
+					600: '#a1665e',
+					700: '#8b4513'
 				}
 			},
 			borderRadius: {
