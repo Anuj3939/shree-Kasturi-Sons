@@ -99,15 +99,22 @@ const AboutSection = () => {
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-center mb-12 text-brand-800">Our Founder</h2>
           {founders.map((founder, index) => (
-            <Card key={index} className="max-w-4xl mx-auto bg-gradient-to-r from-orange-500 to-red-500 text-white">
+            <Card key={index} className="max-w-6xl mx-auto bg-gradient-to-r from-orange-500 to-red-500 text-white">
               <CardContent className="p-8">
-                <div className="flex flex-col md:flex-row items-center gap-8">
+                <div className="flex flex-col lg:flex-row items-center gap-8">
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold mb-2">{founder.name}</h3>
                     <p className="text-lg opacity-90 mb-4">{founder.title} - {founder.generation}</p>
                     <blockquote className="text-lg italic leading-relaxed">
                       "{founder.quote}"
                     </blockquote>
+                  </div>
+                  <div className="lg:w-80 w-64">
+                    <div className="aspect-square bg-white/20 rounded-full border-4 border-white/30 flex items-center justify-center overflow-hidden">
+                      <div className="w-full h-full bg-white/10 rounded-full flex items-center justify-center text-white/60">
+                        <Users size={80} />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </CardContent>
@@ -118,15 +125,28 @@ const AboutSection = () => {
         {/* Leadership Team */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-center mb-12 text-brand-800">Leadership Team</h2>
-          <div className="grid md:grid-cols-1 gap-8 max-w-4xl mx-auto">
+          <div className="space-y-8 max-w-6xl mx-auto">
             {leadership.map((leader, index) => (
               <Card key={index} className="bg-white/90 backdrop-blur-sm border-0 shadow-lg">
                 <CardContent className="p-8">
-                  <h3 className="text-xl font-bold text-brand-700 mb-2">{leader.name}</h3>
-                  <p className="text-brand-600 mb-4">{leader.title} - {leader.generation}</p>
-                  <blockquote className="text-gray-700 italic leading-relaxed">
-                    "{leader.quote}"
-                  </blockquote>
+                  <div className={`flex flex-col lg:flex-row items-center gap-8 ${
+                    index % 2 === 1 ? 'lg:flex-row-reverse' : ''
+                  }`}>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-brand-700 mb-2">{leader.name}</h3>
+                      <p className="text-brand-600 mb-4">{leader.title} - {leader.generation}</p>
+                      <blockquote className="text-gray-700 italic leading-relaxed">
+                        "{leader.quote}"
+                      </blockquote>
+                    </div>
+                    <div className="lg:w-64 w-48">
+                      <div className="aspect-square bg-brand-100 rounded-full border-4 border-brand-200 flex items-center justify-center overflow-hidden">
+                        <div className="w-full h-full bg-brand-50 rounded-full flex items-center justify-center text-brand-400">
+                          <Users size={60} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             ))}
