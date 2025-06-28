@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Search, Download, MapPin } from 'lucide-react';
+import { Search, Download, MapPin, Phone, Building } from 'lucide-react';
 
 const ElectronicsSection = () => {
   const [selectedZone, setSelectedZone] = useState('all');
@@ -12,36 +12,49 @@ const ElectronicsSection = () => {
   const products = [
     {
       id: 1,
-      name: 'LED Light Panels',
-      category: 'Lighting',
-      zones: ['North', 'South'],
-      specifications: '50W, 220V',
+      name: 'XIAOMI Smartphones',
+      category: 'Mobile',
+      zones: ['Bhopal', 'MP'],
+      specifications: 'Latest Models Available',
       image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=300&fit=crop'
     },
     {
       id: 2,
-      name: 'Power Cables',
-      category: 'Cables',
-      zones: ['East', 'West'],
-      specifications: '2.5mm, Copper',
+      name: 'Samsung Electronics',
+      category: 'Consumer Electronics',
+      zones: ['Bhopal', 'Khargone', 'Indore'],
+      specifications: 'TV, Refrigerator, etc.',
       image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=300&fit=crop'
     },
     {
       id: 3,
-      name: 'Smart Switches',
-      category: 'Switches',
-      zones: ['North', 'Central'],
-      specifications: 'WiFi Enabled',
+      name: 'Commercial Electronics',
+      category: 'Commercial',
+      zones: ['MP'],
+      specifications: 'Hotel & Restaurant Equipment',
       image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=300&fit=crop'
     }
   ];
 
-  const zones = [
-    { name: 'North Zone', contact: '+91 98765 11111', area: 'Delhi, Punjab, Haryana' },
-    { name: 'South Zone', contact: '+91 98765 22222', area: 'Chennai, Bangalore, Hyderabad' },
-    { name: 'East Zone', contact: '+91 98765 33333', area: 'Kolkata, Bhubaneswar' },
-    { name: 'West Zone', contact: '+91 98765 44444', area: 'Mumbai, Pune, Ahmedabad' },
-    { name: 'Central Zone', contact: '+91 98765 55555', area: 'Bhopal, Indore, Nagpur' }
+  const managers = [
+    {
+      brand: 'XIAOMI',
+      name: 'Ketan Banka',
+      contact: '99775520000',
+      region: 'Madhya Pradesh Zonal Distribution'
+    },
+    {
+      brand: 'Samsung',
+      name: 'Amit Malik',
+      contact: '9993685274',
+      region: 'Bhopal Region Distribution'
+    },
+    {
+      brand: 'Elanpro',
+      name: 'Pooja Negi',
+      contact: '9926643337',
+      region: 'Commercial Electronics'
+    }
   ];
 
   return (
@@ -52,8 +65,39 @@ const ElectronicsSection = () => {
             Zonal Electronic Distribution
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive electronics distribution network covering LEDs, appliances, cables, and more across multiple zones.
+            Comprehensive electronics distribution network covering smartphones, consumer electronics, and commercial equipment across Madhya Pradesh.
           </p>
+        </div>
+
+        {/* Business Info */}
+        <div className="mb-12">
+          <Card className="bg-gradient-to-r from-electronics-600 to-blue-600 text-white">
+            <CardContent className="p-8">
+              <div className="mb-6">
+                <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                  <Building className="h-6 w-6" />
+                  Zonal Electronic Distribution
+                </h3>
+                <p className="text-lg mb-4">
+                  We deal in electronic distribution of consumer electronics which includes smartphones, Television, Refrigerator, etc and also commercial electronics such as commercial refrigerator and all the other electronic product needed in hotel and restaurant industry for the entire MP. Major Brand we deal in is XIAOMI Madhya Pradesh zonal distribution and SAMSUNG Consumer electronic Bhopal region distribution.
+                </p>
+              </div>
+              
+              <div className="grid md:grid-cols-3 gap-6">
+                {managers.map((manager, index) => (
+                  <div key={index} className="bg-white/20 p-4 rounded-lg">
+                    <h4 className="text-lg font-bold mb-2 flex items-center gap-2">
+                      <Phone className="h-4 w-4" />
+                      {manager.brand} Manager
+                    </h4>
+                    <p className="font-semibold">{manager.name}</p>
+                    <p className="text-sm opacity-90 mb-2">{manager.region}</p>
+                    <p className="font-mono">📞 {manager.contact}</p>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Product Catalog */}
@@ -67,11 +111,10 @@ const ElectronicsSection = () => {
                 </SelectTrigger>
                 <SelectContent className="bg-white">
                   <SelectItem value="all">All Zones</SelectItem>
-                  <SelectItem value="North">North Zone</SelectItem>
-                  <SelectItem value="South">South Zone</SelectItem>
-                  <SelectItem value="East">East Zone</SelectItem>
-                  <SelectItem value="West">West Zone</SelectItem>
-                  <SelectItem value="Central">Central Zone</SelectItem>
+                  <SelectItem value="Bhopal">Bhopal</SelectItem>
+                  <SelectItem value="Khargone">Khargone</SelectItem>
+                  <SelectItem value="Indore">Indore</SelectItem>
+                  <SelectItem value="MP">Madhya Pradesh</SelectItem>
                 </SelectContent>
               </Select>
               <Button className="bg-electronics-600 hover:bg-electronics-700">
@@ -106,28 +149,6 @@ const ElectronicsSection = () => {
                   </div>
                   <Button size="sm" className="w-full bg-electronics-600 hover:bg-electronics-700">
                     Request Quote
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-
-        {/* Zonal Contacts */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Zonal Contacts</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {zones.map((zone, index) => (
-              <Card key={index} className="bg-white/90 backdrop-blur-sm border-0">
-                <CardContent className="p-6">
-                  <h4 className="text-lg font-bold text-electronics-700 mb-2 flex items-center gap-2">
-                    <MapPin className="h-5 w-5" />
-                    {zone.name}
-                  </h4>
-                  <p className="text-gray-600 text-sm mb-2">{zone.area}</p>
-                  <p className="text-electronics-600 font-medium">{zone.contact}</p>
-                  <Button size="sm" variant="outline" className="mt-3 w-full">
-                    Contact Distributor
                   </Button>
                 </CardContent>
               </Card>

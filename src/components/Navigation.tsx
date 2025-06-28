@@ -19,6 +19,7 @@ const Navigation = () => {
 
   const navItems = [
     { label: 'Home', href: '/', color: 'brand' },
+    { label: 'About', href: '/about', color: 'brand' },
     { label: 'Solar', href: '/solar', color: 'solar' },
     { label: 'Gold Jewelry', href: '/gold', color: 'gold' },
     { label: 'Construction', href: '/construction', color: 'builder' },

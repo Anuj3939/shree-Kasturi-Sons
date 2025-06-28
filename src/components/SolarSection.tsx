@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Upload, FileText, Calculator } from 'lucide-react';
+import { Upload, FileText, Calculator, Phone, Award } from 'lucide-react';
 
 const SolarSection = () => {
   const [uploadedFile, setUploadedFile] = useState<File | null>(null);
@@ -35,6 +35,36 @@ const SolarSection = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Upload your electricity bill and get instant recommendations for the perfect solar solution tailored to your energy needs.
           </p>
+        </div>
+
+        {/* Company Info */}
+        <div className="mb-12">
+          <Card className="bg-gradient-to-r from-solar-600 to-orange-600 text-white">
+            <CardContent className="p-8">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                    <Award className="h-6 w-6" />
+                    Our Solar Expertise
+                  </h3>
+                  <p className="text-lg mb-4">
+                    We provide end to end solution for the solar panel installation and after sales services Pan MP. 
+                    Till now we have installed over 4000kw solar panel and still counting all over Madhya Pradesh region.
+                  </p>
+                </div>
+                <div className="bg-white/20 p-6 rounded-lg">
+                  <h4 className="text-xl font-bold mb-4 flex items-center gap-2">
+                    <Phone className="h-5 w-5" />
+                    Contact Solar Manager
+                  </h4>
+                  <div className="space-y-2">
+                    <p className="text-lg font-semibold">Ishitva Soni</p>
+                    <p className="text-lg">📞 9977888098</p>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-start">

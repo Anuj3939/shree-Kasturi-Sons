@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Search, Filter } from 'lucide-react';
+import { Search, Filter, Phone, Store } from 'lucide-react';
 
 const GoldSection = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -64,6 +64,36 @@ const GoldSection = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Exclusive collection for verified retailers. Browse our premium catalog and request bulk pricing for your business needs.
           </p>
+        </div>
+
+        {/* Business Info */}
+        <div className="mb-12">
+          <Card className="bg-gradient-to-r from-gold-600 to-yellow-600 text-white">
+            <CardContent className="p-8">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                    <Store className="h-6 w-6" />
+                    Shree Kasturi Jewelers
+                  </h3>
+                  <p className="text-lg mb-4">
+                    We deal in all kind of gold fashion jewelry such as bangles, necklace, ear rings, etc. 
+                    We provide all kind of jewelry to the local jewelry shops and provide them huge variety of products.
+                  </p>
+                </div>
+                <div className="bg-white/20 p-6 rounded-lg">
+                  <h4 className="text-xl font-bold mb-4 flex items-center gap-2">
+                    <Phone className="h-5 w-5" />
+                    Contact Manager
+                  </h4>
+                  <div className="space-y-2">
+                    <p className="text-lg font-semibold">Monty Mahajan</p>
+                    <p className="text-lg">📞 8898972222</p>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Filters */}
