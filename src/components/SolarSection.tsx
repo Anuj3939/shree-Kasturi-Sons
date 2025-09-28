@@ -26,13 +26,13 @@ const SolarSection = () => {
   };
 
   return (
-    <section id="solar" className="py-20 bg-gradient-to-br from-solar-50 to-orange-50">
+    <section id="solar" className="py-20 bg-transparent">{/* Transparent to show dark background */}
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold font-vintage text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold font-vintage text-white mb-4">
             Solar Panel Installation
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Upload your electricity bill and get instant recommendations for the perfect solar solution tailored to your energy needs.
           </p>
         </div>
@@ -69,7 +69,7 @@ const SolarSection = () => {
 
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Upload Interface */}
-          <Card className="bg-white/90 backdrop-blur-sm shadow-xl border-0">
+          <Card className="bg-white/10 backdrop-blur-md shadow-xl border border-white/20">{/* Dark card */}
             <CardHeader>
               <CardTitle className="text-2xl flex items-center gap-2 text-solar-700">
                 <Upload className="h-6 w-6" />

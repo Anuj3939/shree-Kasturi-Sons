@@ -31,7 +31,7 @@ const Navigation = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      isScrolled ? 'bg-black/80 backdrop-blur-md shadow-lg border-b border-white/10' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
@@ -41,7 +41,7 @@ const Navigation = () => {
               alt="Shree Kasturi & Son's Logo" 
               className="h-10 w-auto"
             />
-            <div className="text-xl font-bold font-vintage text-brand-800">
+            <div className="text-xl font-bold font-vintage text-white">
               Shree Kasturi & Son's
             </div>
           </Link>
@@ -54,12 +54,12 @@ const Navigation = () => {
                 to={item.href}
                 className={`text-sm font-medium transition-colors relative group ${
                   location.pathname === item.href 
-                    ? `text-${item.color}-700 font-semibold` 
-                    : `text-gray-700 hover:text-${item.color}-600`
+                    ? `text-yellow-400 font-semibold` 
+                    : `text-gray-300 hover:text-yellow-300`
                 }`}
               >
                 {item.label}
-                <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-${item.color}-600 transition-all ${
+                <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-400 transition-all ${
                   location.pathname === item.href ? 'w-full' : 'group-hover:w-full'
                 }`}></span>
               </Link>
@@ -71,13 +71,13 @@ const Navigation = () => {
             className="md:hidden p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            <Menu size={24} className="text-brand-800" />
+            <Menu size={24} className="text-white" />
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-200 animate-slide-in">
+          <div className="md:hidden bg-black/90 backdrop-blur-md border-t border-white/10 animate-slide-in">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map((item) => (
                 <Link
@@ -86,8 +86,8 @@ const Navigation = () => {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={`block px-3 py-2 text-base font-medium rounded-md w-full text-left transition-colors ${
                     location.pathname === item.href
-                      ? `text-${item.color}-700 bg-${item.color}-50 font-semibold`
-                      : `text-gray-700 hover:text-${item.color}-600 hover:bg-gray-50`
+                      ? `text-yellow-400 bg-white/10 font-semibold`
+                      : `text-gray-300 hover:text-yellow-300 hover:bg-white/10`
                   }`}
                 >
                   {item.label}
