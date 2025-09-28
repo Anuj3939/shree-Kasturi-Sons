@@ -61,7 +61,7 @@ const ElectronicsSection = () => {
     <section id="electronics" className="py-20 bg-gradient-to-br from-electronics-50 to-blue-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold font-vintage text-gray-900 mb-4">
             Zonal Electronic Distribution
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -74,7 +74,7 @@ const ElectronicsSection = () => {
           <Card className="bg-gradient-to-r from-electronics-600 to-blue-600 text-white">
             <CardContent className="p-8">
               <div className="mb-6">
-                <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                <h3 className="text-2xl font-bold font-vintage mb-4 flex items-center gap-2">
                   <Building className="h-6 w-6" />
                   Zonal Electronic Distribution
                 </h3>

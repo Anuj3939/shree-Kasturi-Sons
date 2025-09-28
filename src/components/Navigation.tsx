@@ -41,7 +41,7 @@ const Navigation = () => {
               alt="Shree Kasturi & Son's Logo" 
               className="h-10 w-auto"
             />
-            <div className="text-xl font-bold text-brand-800">
+            <div className="text-xl font-bold font-vintage text-brand-800">
               Shree Kasturi & Son's
             </div>
           </Link>

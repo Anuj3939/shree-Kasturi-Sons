@@ -87,7 +87,7 @@ const AboutSection = () => {
     <section className="py-20 bg-gradient-to-br from-brand-50 to-orange-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold font-vintage text-gray-900 mb-4">
             About Shree Kasturi & Son's
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -97,13 +97,13 @@ const AboutSection = () => {
 
         {/* Founder Section */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-12 text-brand-800">Our Founder</h2>
+          <h2 className="text-3xl font-bold font-vintage text-center mb-12 text-brand-800">Our Founder</h2>
           {founders.map((founder, index) => (
             <Card key={index} className="max-w-6xl mx-auto bg-gradient-to-r from-orange-500 to-red-500 text-white">
               <CardContent className="p-8">
                 <div className="flex flex-col lg:flex-row items-center gap-8">
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-2">{founder.name}</h3>
+                    <h3 className="text-2xl font-bold font-vintage mb-2">{founder.name}</h3>
                     <p className="text-lg opacity-90 mb-4">{founder.title} - {founder.generation}</p>
                     <blockquote className="text-lg italic leading-relaxed">
                       "{founder.quote}"
@@ -124,7 +124,7 @@ const AboutSection = () => {
 
         {/* Leadership Team */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-12 text-brand-800">Leadership Team</h2>
+          <h2 className="text-3xl font-bold font-vintage text-center mb-12 text-brand-800">Leadership Team</h2>
           <div className="space-y-8 max-w-6xl mx-auto">
             {leadership.map((leader, index) => (
               <Card key={index} className="bg-white/90 backdrop-blur-sm border-0 shadow-lg">
@@ -133,7 +133,7 @@ const AboutSection = () => {
                     index % 2 === 1 ? 'lg:flex-row-reverse' : ''
                   }`}>
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-brand-700 mb-2">{leader.name}</h3>
+                      <h3 className="text-xl font-bold font-vintage text-brand-700 mb-2">{leader.name}</h3>
                       <p className="text-brand-600 mb-4">{leader.title} - {leader.generation}</p>
                       <blockquote className="text-gray-700 italic leading-relaxed">
                         "{leader.quote}"

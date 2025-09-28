@@ -23,10 +23,10 @@ const EcoComingSoon = () => {
               </div>
             </div>
             
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold font-vintage text-gray-900 mb-6">
               Eco Products
             </h1>
-            <h2 className="text-3xl md:text-4xl font-bold text-eco-600 mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold font-vintage text-eco-600 mb-8">
               Coming Soon
             </h2>
             
@@ -78,7 +78,7 @@ const EcoComingSoon = () => {
             <CardContent className="p-8">
               <div className="flex items-center justify-center gap-2 mb-6">
                 <Bell className="h-6 w-6" />
-                <h3 className="text-2xl font-bold">Get Notified When We Launch</h3>
+                <h3 className="text-2xl font-bold font-vintage">Get Notified When We Launch</h3>
               </div>
               
               <p className="text-center opacity-90 mb-6">

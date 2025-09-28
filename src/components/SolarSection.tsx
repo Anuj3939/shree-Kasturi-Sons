@@ -29,7 +29,7 @@ const SolarSection = () => {
     <section id="solar" className="py-20 bg-gradient-to-br from-solar-50 to-orange-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold font-vintage text-gray-900 mb-4">
             Solar Panel Installation
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -43,7 +43,7 @@ const SolarSection = () => {
             <CardContent className="p-8">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                  <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                  <h3 className="text-2xl font-bold font-vintage mb-4 flex items-center gap-2">
                     <Award className="h-6 w-6" />
                     Our Solar Expertise
                   </h3>

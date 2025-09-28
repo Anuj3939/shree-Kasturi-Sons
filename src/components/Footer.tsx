@@ -25,7 +25,7 @@ const Footer = () => {
                 alt="Shree Kasturi & Son's Logo" 
                 className="h-10 w-auto bg-white/90 rounded-full p-1"
               />
-              <h3 className="text-2xl font-bold text-brand-100">
+              <h3 className="text-2xl font-bold font-vintage text-brand-100">
                 Shree Kasturi & Son's
               </h3>
             </div>

@@ -21,7 +21,7 @@ const HeroSection = () => {
             className="h-32 md:h-40 w-auto"
           />
         </div>
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 text-brand-800 animate-fade-in">
+        <h1 className="text-5xl md:text-7xl font-bold font-vintage mb-6 text-brand-800 animate-fade-in">
           Shree Kasturi & Son's
         </h1>
         <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto animate-fade-in" style={{animationDelay: '0.2s'}}>

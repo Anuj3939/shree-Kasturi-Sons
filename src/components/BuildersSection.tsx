@@ -43,7 +43,7 @@ const BuildersSection = () => {
     <section id="builders" className="py-20 bg-gradient-to-br from-builder-50 to-slate-100">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold font-vintage text-gray-900 mb-4">
             Builders & Colonizers
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
