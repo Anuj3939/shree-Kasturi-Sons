@@ -18,7 +18,7 @@ const HeroSection = () => {
           <img 
             src="/lovable-uploads/8a45c65e-34e6-4a22-9ead-4864adce1de8.png" 
             alt="Shree Kasturi & Son's Logo" 
-            className="h-32 md:h-40 w-auto"
+            className="h-50 md:h-58 w-auto"
           />
         </div>
         <h1 className="text-5xl md:text-7xl font-bold font-vintage mb-6 text-white animate-fade-in">
