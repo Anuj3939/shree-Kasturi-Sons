@@ -13,7 +13,7 @@ const BuildersSection = () => {
       name: 'Shri Tirupati Residency Ratlam ',
       type: 'Residential',
       status: 'Completed',
-      image: 'public/lovable-uploads/IMG_8054.png',
+      image: '/lovable-uploads/IMG_8054.png',
       description: 'Premium residential complex with modern amenities and green spaces.'
     },
     {
@@ -29,7 +29,7 @@ const BuildersSection = () => {
       name: 'Panchwati Colony Khargone',
       type: 'Residential',
       status: 'Completed',
-      image: 'public/lovable-uploads/IMG_8054.png',
+      image: '/lovable-uploads/IMG_8054.png',
       description: 'Eco-friendly villas with private gardens and sustainable features.'
     },
     {
@@ -37,7 +37,7 @@ const BuildersSection = () => {
       name: 'Barsana Colony Khargone',
       type: 'Residential',
       status: 'Completed',
-      image: 'public/lovable-uploads/IMG_8055.png',
+      image: '/lovable-uploads/IMG_8055.png',
       description: 'Eco-friendly villas with private gardens and sustainable features.'
     },
     {
@@ -45,7 +45,7 @@ const BuildersSection = () => {
       name: 'Silver Inn Ratlam',
       type: 'Residential',
       status: 'Completed',
-      image: 'public/lovable-uploads/IMG_8056.png',
+      image: '/lovable-uploads/IMG_8056.png',
       description: 'Eco-friendly villas with private gardens and sustainable features.'
     },
     {
@@ -53,7 +53,7 @@ const BuildersSection = () => {
       name: 'Veeramani Paradise',
       type: 'Residential',
       status: 'Completed',
-      image: 'public/lovable-uploads/IMG_8057.png',
+      image: '/lovable-uploads/IMG_8057.png',
       description: 'Eco-friendly villas with private gardens and sustainable features.'
     },
     {
@@ -61,7 +61,7 @@ const BuildersSection = () => {
       name: '40 More Completed Sites',
       type: 'Residential',
       status: 'Completed',
-      image: 'public/lovable-uploads/IMG_8058.png',
+      image: '/lovable-uploads/IMG_8058.png',
       description: 'Eco-friendly villas with private gardens and sustainable features.'
     },
     {
@@ -70,7 +70,7 @@ const BuildersSection = () => {
     
       type: 'Residential & Commercial',
       status: 'Completed',
-      image: 'public/lovable-uploads/51591265-10b5-4423-9dba-42bb5f86c2fc.jpeg',
+      image: '/lovable-uploads/51591265-10b5-4423-9dba-42bb5f86c2fc.jpeg',
       description: 'locations: Mumbai, Indore, Jhabua, Bhopal, Ratlam'
     },
   ];
