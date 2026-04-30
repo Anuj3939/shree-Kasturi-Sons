@@ -21,7 +21,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <img 
-                src="public/logo.png" 
+                src="/logo.png" 
                 alt="Shree Kasturi & Son's Logo" 
                 className="h-10 w-auto bg-white/90 rounded-full p-1"
               />
