@@ -21,7 +21,7 @@ const BuildersSection = () => {
       name: 'Shri Kasturi Heights Khargone',
       type: 'Commercial',
       status: 'Completed ',
-      image: 'public/lovable-uploads/IMG_8053.png',
+      image: '/lovable-uploads/IMG_8053.png',
       description: 'State-of-the-art commercial complex designed for modern businesses.'
     },
     {
