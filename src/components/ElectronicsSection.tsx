@@ -28,10 +28,10 @@ const ElectronicsSection = () => {
     },
     {
       id: 3,
-      name: 'Commercial Electronics',
+      name: 'Kastrex (Consumer Electronics) ',
       category: 'Commercial',
       zones: ['MP'],
-      specifications: 'Hotel & Restaurant Equipment',
+      specifications: 'All Consumer Electronics',
       image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=300&fit=crop'
     }
   ];
@@ -45,33 +45,33 @@ const ElectronicsSection = () => {
     },
     {
       brand: 'Samsung',
-      name: 'Amit Malik',
-      contact: '9993685274',
+      name: 'Krishna Nayar',
+      contact: '9826470938',
       region: 'Bhopal Region Distribution'
     },
     {
-      brand: 'Elanpro',
-      name: 'Pooja Negi',
-      contact: '9926643337',
-      region: 'Commercial Electronics'
+      brand: 'Kastrex',
+      name: 'Krishna Nayar',
+      contact: '9826470938',
+      region: 'Pan India Consumer Electronics'
     }
   ];
 
   return (
-    <section id="electronics" className="py-20 bg-gradient-to-br from-electronics-50 to-blue-50">
+    <section id="electronics" className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold font-vintage text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold font-vintage text-white mb-4">
             Zonal Electronic Distribution
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Comprehensive electronics distribution network covering smartphones, consumer electronics, and commercial equipment across Madhya Pradesh.
           </p>
         </div>
 
         {/* Business Info */}
         <div className="mb-12">
-          <Card className="bg-gradient-to-r from-electronics-600 to-blue-600 text-white">
+          <Card className="bg-gradient-to-br from-yellow-500 via-yellow-600 to-yellow-700 text-white shadow-2xl border border-yellow-400/30" style={{boxShadow: '0 0 30px rgba(251, 191, 36, 0.4), 0 0 60px rgba(251, 191, 36, 0.2)'}}>
             <CardContent className="p-8">
               <div className="mb-6">
                 <h3 className="text-2xl font-bold font-vintage mb-4 flex items-center gap-2">
@@ -103,7 +103,7 @@ const ElectronicsSection = () => {
         {/* Product Catalog */}
         <div className="mb-16">
           <div className="flex flex-col md:flex-row gap-4 mb-8 items-center justify-between">
-            <h3 className="text-2xl font-bold text-gray-900">Product Catalog</h3>
+            <h3 className="text-2xl font-bold text-yellow-800">Product Catalog</h3>
             <div className="flex gap-4">
               <Select value={selectedZone} onValueChange={setSelectedZone}>
                 <SelectTrigger className="w-48">
@@ -117,7 +117,7 @@ const ElectronicsSection = () => {
                   <SelectItem value="MP">Madhya Pradesh</SelectItem>
                 </SelectContent>
               </Select>
-              <Button className="bg-electronics-600 hover:bg-electronics-700">
+              <Button className="bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-white shadow-lg">
                 <Download className="h-4 w-4 mr-2" />
                 Catalog PDF
               </Button>
@@ -126,30 +126,28 @@ const ElectronicsSection = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product) => (
-              <Card key={product.id} className="bg-white/90 backdrop-blur-sm border-0 hover:shadow-lg transition-shadow">
+              <Card key={product.id} className="bg-gradient-to-br from-yellow-50 via-yellow-100 to-yellow-200 border border-yellow-300/50 backdrop-blur-sm hover:shadow-lg transition-shadow shadow-lg" style={{boxShadow: '0 0 15px rgba(251, 191, 36, 0.2)'}}>
                 <div className="relative overflow-hidden">
                   <img
                     src={product.image}
                     alt={product.name}
                     className="w-full h-48 object-cover"
                   />
-                  <div className="absolute top-4 right-4 bg-electronics-500 text-white px-2 py-1 rounded text-xs">
+                  <div className="absolute top-4 right-4 bg-gradient-to-r from-yellow-500 to-yellow-600 text-white px-2 py-1 rounded text-xs shadow-lg">
                     {product.category}
                   </div>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">{product.name}</h3>
-                  <p className="text-gray-600 mb-3">{product.specifications}</p>
+                  <h3 className="text-lg font-bold text-yellow-800 mb-2">{product.name}</h3>
+                  <p className="text-yellow-700 mb-3">{product.specifications}</p>
                   <div className="flex flex-wrap gap-1 mb-4">
                     {product.zones.map((zone) => (
-                      <span key={zone} className="bg-electronics-100 text-electronics-700 px-2 py-1 rounded text-xs">
+                      <span key={zone} className="bg-gradient-to-r from-yellow-200 to-yellow-300 text-yellow-800 px-2 py-1 rounded text-xs border border-yellow-400/30">
                         {zone}
                       </span>
                     ))}
                   </div>
-                  <Button size="sm" className="w-full bg-electronics-600 hover:bg-electronics-700">
-                    Request Quote
-                  </Button>
+                 
                 </CardContent>
               </Card>
             ))}
@@ -157,25 +155,7 @@ const ElectronicsSection = () => {
         </div>
 
         {/* Dealer Registration */}
-        <Card className="max-w-2xl mx-auto bg-gradient-to-r from-electronics-600 to-blue-600 text-white">
-          <CardHeader>
-            <CardTitle className="text-2xl text-center">Become a Dealer</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <p className="text-center opacity-90">
-              Join our extensive dealer network and grow your business with our premium electronic products.
-            </p>
-            <div className="grid md:grid-cols-2 gap-4">
-              <Input placeholder="Business Name" className="bg-white/20 border-white/30 text-white placeholder:text-white/70" />
-              <Input placeholder="Contact Person" className="bg-white/20 border-white/30 text-white placeholder:text-white/70" />
-            </div>
-            <Input placeholder="Phone Number" className="bg-white/20 border-white/30 text-white placeholder:text-white/70" />
-            <Input placeholder="Business Address" className="bg-white/20 border-white/30 text-white placeholder:text-white/70" />
-            <Button variant="secondary" className="w-full" size="lg">
-              Submit Application
-            </Button>
-          </CardContent>
-        </Card>
+        
       </div>
     </section>
   );

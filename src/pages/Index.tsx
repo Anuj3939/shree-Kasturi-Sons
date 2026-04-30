@@ -7,8 +7,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Sun, Crown, Building, UtensilsCrossed, Zap, Leaf } from 'lucide-react';
+import { InfiniteSlider } from '@/components/core/infinite-slider';
 
-const Index = () => {
+const BusinessVerticalsSlider = () => {
   const businessVerticals = [
     {
       title: 'Solar Installation',
@@ -26,7 +27,7 @@ const Index = () => {
     },
     {
       title: 'Construction & Development',
-      description: 'Residential and commercial construction projects',
+      description: 'Residential & commercial projects',
       icon: Building,
       color: 'builder',
       link: '/construction'
@@ -46,29 +47,106 @@ const Index = () => {
       link: '/electronics'
     },
     {
-      title: 'Eco-Friendly Products',
-      description: 'Biodegradable granules and sustainable packaging solutions',
-      icon: Leaf,
-      color: 'eco',
-      link: '/eco'
+      title: 'Premium Foods & Catering',
+      description: 'Multi-cuisine offerings with premium quality ingredients',
+      icon: UtensilsCrossed,
+      color: 'restaurant',
+      link: '/foods'
     }
   ];
 
   return (
-    <div className="min-h-screen w-full bg-[#020617] relative">
-      {/* Gold Radial Glow Background */}
-      <div
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `radial-gradient(circle 500px at 50% 100px, rgba(251,191,36,0.4), transparent)`,
-        }}
-      />
-      <div className="relative z-10">
-        <Navigation />
-        <HeroSection />
+    <div className='flex flex-col md:flex-row h-[200px] md:h-[400px] space-y-6 md:space-y-0 md:space-x-8'>
+      {/* Mobile: Single horizontal slider, Desktop: Two vertical sliders */}
+      <div className="md:hidden w-full">
+        <InfiniteSlider direction='horizontal' speed={20} className="w-full">
+          {businessVerticals.map((vertical) => {
+            const IconComponent = vertical.icon;
+            return (
+              <Link key={vertical.title} to={vertical.link} className="block">
+                <Card className="group hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-yellow-50 via-yellow-100 to-yellow-200 border border-yellow-300/50 backdrop-blur-md w-[200px] h-[180px] cursor-pointer hover:scale-105 shadow-lg" style={{boxShadow: '0 0 15px rgba(251, 191, 36, 0.2)'}}>
+                  <CardHeader className="text-center pb-2">
+                    <div className={`mx-auto w-10 h-10 rounded-full bg-gradient-to-br from-yellow-200 to-yellow-300 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform shadow-lg`}>
+                      <IconComponent className={`h-5 w-5 text-yellow-700`} />
+                    </div>
+                    <CardTitle className="text-sm text-yellow-800 font-vintage">{vertical.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-center pt-0">
+                    <p className="text-yellow-700 text-xs line-clamp-2">{vertical.description}</p>
+                  </CardContent>
+                </Card>
+              </Link>
+            );
+          })}
+        </InfiniteSlider>
+      </div>
       
+      {/* Desktop: Two vertical sliders */}
+      <div className="hidden md:flex w-full space-x-8">
+        <InfiniteSlider direction='vertical' speed={25} className="w-auto">
+          {businessVerticals.map((vertical) => {
+            const IconComponent = vertical.icon;
+            return (
+              <Link key={vertical.title} to={vertical.link} className="block">
+                <Card className="group hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-yellow-50 via-yellow-100 to-yellow-200 border border-yellow-300/50 backdrop-blur-md w-[280px] h-[180px] cursor-pointer hover:scale-105 shadow-lg" style={{boxShadow: '0 0 15px rgba(251, 191, 36, 0.2)'}}>
+                  <CardHeader className="text-center pb-2">
+                    <div className={`mx-auto w-12 h-12 rounded-full bg-gradient-to-br from-yellow-200 to-yellow-300 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform shadow-lg`}>
+                      <IconComponent className={`h-6 w-6 text-yellow-700`} />
+                    </div>
+                    <CardTitle className="text-lg text-yellow-800 font-vintage">{vertical.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-center pt-0">
+                    <p className="text-yellow-700 text-sm line-clamp-3">{vertical.description}</p>
+                  </CardContent>
+                </Card>
+              </Link>
+            );
+          })}
+        </InfiniteSlider>
+        <InfiniteSlider direction='vertical' reverse speed={30} className="w-auto">
+          {businessVerticals.map((vertical) => {
+            const IconComponent = vertical.icon;
+            return (
+              <Link key={`reverse-${vertical.title}`} to={vertical.link} className="block">
+                <Card className="group hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-yellow-50 via-yellow-100 to-yellow-200 border border-yellow-300/50 backdrop-blur-md w-[280px] h-[180px] cursor-pointer hover:scale-105 shadow-lg" style={{boxShadow: '0 0 15px rgba(251, 191, 36, 0.2)'}}>
+                  <CardHeader className="text-center pb-2">
+                    <div className={`mx-auto w-12 h-12 rounded-full bg-gradient-to-br from-yellow-200 to-yellow-300 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform shadow-lg`}>
+                      <IconComponent className={`h-6 w-6 text-yellow-700`} />
+                    </div>
+                    <CardTitle className="text-lg text-yellow-800 font-vintage">{vertical.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-center pt-0">
+                    <p className="text-yellow-700 text-sm line-clamp-3">{vertical.description}</p>
+                  </CardContent>
+                </Card>
+              </Link>
+            );
+          })}
+        </InfiniteSlider>
+      </div>
+    </div>
+  );
+};
+
+const Index = () => {
+
+  return (
+    <div 
+      className="min-h-screen w-full bg-[#020617]"
+      style={{
+        backgroundImage: `
+          radial-gradient(circle 800px at 50% 0%, rgba(251,191,36,0.5), transparent 60%),
+          radial-gradient(circle 600px at 50% 0%, rgba(251,191,36,0.4), transparent 50%),
+          radial-gradient(circle 400px at 50% 0%, rgba(251,191,36,0.3), transparent 40%)
+        `,
+        backgroundAttachment: 'scroll'
+      }}
+    >
+      <Navigation />
+      <HeroSection />
+    
       {/* Business Verticals Overview */}
-      <section className="py-20 bg-transparent">{/* Transparent to show dark background */}
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold font-vintage text-white mb-4">
@@ -79,34 +157,13 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {businessVerticals.map((vertical) => {
-              const IconComponent = vertical.icon;
-              return (
-                <Card key={vertical.title} className="group hover:shadow-xl transition-all duration-300 bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20">{/* Dark card background */}
-                  <CardHeader className="text-center">
-                    <div className={`mx-auto w-16 h-16 rounded-full bg-${vertical.color}-100 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                      <IconComponent className={`h-8 w-8 text-${vertical.color}-600`} />
-                    </div>
-                    <CardTitle className="text-xl text-white font-vintage">{vertical.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-center">
-                    <p className="text-gray-300 mb-6">{vertical.description}</p>
-                    <Link to={vertical.link}>
-                      <Button className={`bg-${vertical.color}-600 hover:bg-${vertical.color}-700 w-full`}>
-                        Learn More
-                      </Button>
-                    </Link>
-                  </CardContent>
-                </Card>
-              );
-            })}
+          <div className="flex justify-center px-4">
+            <BusinessVerticalsSlider />
           </div>
         </div>
       </section>
 
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 };

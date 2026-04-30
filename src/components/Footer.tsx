@@ -10,7 +10,7 @@ const Footer = () => {
     { name: 'Construction', href: '/construction' },
     { name: 'Restaurants', href: '/restaurants' },
     { name: 'Electronics', href: '/electronics' },
-    { name: 'Eco Products', href: '/eco' }
+    { name: 'Foods', href: '/foods' }
   ];
 
   return (
@@ -21,7 +21,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <img 
-                src="/lovable-uploads/8a45c65e-34e6-4a22-9ead-4864adce1de8.png" 
+                src="public/logo.png" 
                 alt="Shree Kasturi & Son's Logo" 
                 className="h-10 w-auto bg-white/90 rounded-full p-1"
               />
@@ -32,17 +32,7 @@ const Footer = () => {
             <p className="text-gray-300 mb-4">
               Leading business conglomerate providing comprehensive solutions across multiple industries.
             </p>
-            <div className="flex space-x-4">
-              <div className="w-8 h-8 bg-brand-700 rounded-full flex items-center justify-center">
-                <span className="text-xs font-bold">f</span>
-              </div>
-              <div className="w-8 h-8 bg-brand-600 rounded-full flex items-center justify-center">
-                <span className="text-xs font-bold">t</span>
-              </div>
-              <div className="w-8 h-8 bg-brand-700 rounded-full flex items-center justify-center">
-                <span className="text-xs font-bold">in</span>
-              </div>
-            </div>
+           
           </div>
 
           {/* Business Verticals */}
@@ -68,10 +58,10 @@ const Footer = () => {
             <ul className="space-y-2 text-gray-300">
               <li><Link to="/" className="hover:text-yellow-400 transition-colors">Home</Link></li>
               <li><Link to="/about" className="hover:text-yellow-400 transition-colors">About Us</Link></li>
-              <li><Link to="/careers" className="hover:text-yellow-400 transition-colors">Career</Link></li>
+             
               <li><Link to="/blog" className="hover:text-yellow-400 transition-colors">Blog</Link></li>
-              <li><Link to="/contact" className="hover:text-yellow-400 transition-colors">Support</Link></li>
-              <li><Link to="/terms" className="hover:text-yellow-400 transition-colors">Terms of Service</Link></li>
+             
+              
             </ul>
           </div>
 
@@ -79,9 +69,8 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4 text-white">Contact Info</h4>
             <div className="space-y-2 text-gray-300">
-              <p>123 Business District</p>
-              <p>Corporate Plaza, City 110001</p>
-              <p>Phone: +91 98765 00000</p>
+              <p>122, 1st floor, mechanic nagar, near new Bombay disposal, Indore, (452002)</p>
+              <p>Phone: +91 6262633990</p>
               <p>Email: info@shreekasturi.com</p>
             </div>
           </div>
@@ -91,10 +80,14 @@ const Footer = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-center text-gray-400">
           <p>&copy; {new Date().getFullYear()} Shree Kasturi & Son's. All rights reserved.</p>
+           <p>Developed by{" "} <a href="https://anuj02003.netlify.app/" target="_blank" rel="noopener noreferrer"
+                className="text-gray-300 hover:text-white transition-colors duration-300 font-medium">
+                 Anuj Agrawal
+                    </a>
+                     </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link to="/privacy" className="hover:text-yellow-400 transition-colors">Privacy Policy</Link>
             <Link to="/cookies" className="hover:text-yellow-400 transition-colors">Cookie Policy</Link>
-            <Link to="/sitemap" className="hover:text-yellow-400 transition-colors">Sitemap</Link>
           </div>
         </div>
       </div>

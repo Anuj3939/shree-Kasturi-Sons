@@ -46,20 +46,20 @@ const RestaurantsSection = () => {
   ];
 
   return (
-    <section id="restaurants" className="py-20 bg-gradient-to-br from-restaurant-50 to-pink-50">
+    <section id="restaurants" className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold font-vintage text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold font-vintage text-white mb-4">
             Restaurant Business
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover our heritage restaurant business offering diverse cuisines and exceptional dining experiences since 1990.
           </p>
         </div>
 
         {/* Restaurant Heritage */}
         <div className="mb-12">
-          <Card className="bg-gradient-to-r from-restaurant-600 to-pink-600 text-white">
+          <Card className="bg-gradient-to-br from-yellow-500 via-yellow-600 to-yellow-700 text-white shadow-2xl border border-yellow-400/30" style={{boxShadow: '0 0 30px rgba(251, 191, 36, 0.4), 0 0 60px rgba(251, 191, 36, 0.2)'}}>
             <CardContent className="p-8">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
@@ -85,6 +85,7 @@ const RestaurantsSection = () => {
                   <div className="space-y-2">
                     <p className="text-lg font-semibold">Hotel Shree Kasturi</p>
                     <p className="text-lg">📞 8821860747</p>
+                    <p className="text-lg">address: Hotel Shri Kasturi radha vallabh market khargone (451001)</p>
                   </div>
                 </div>
               </div>
@@ -97,9 +98,10 @@ const RestaurantsSection = () => {
           {restaurants.map((restaurant, index) => (
             <Card 
               key={restaurant.id} 
-              className={`group hover:shadow-xl transition-all duration-300 bg-white/90 backdrop-blur-sm border-0 overflow-hidden ${
-                selectedRestaurant === index ? 'ring-2 ring-restaurant-500' : ''
+              className={`group hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-yellow-50 via-yellow-100 to-yellow-200 border border-yellow-300/50 backdrop-blur-sm overflow-hidden shadow-lg ${
+                selectedRestaurant === index ? 'ring-2 ring-yellow-500' : ''
               }`}
+              style={{boxShadow: '0 0 15px rgba(251, 191, 36, 0.2)'}}
               onClick={() => setSelectedRestaurant(index)}
             >
               <div className="grid md:grid-cols-2 gap-6">
@@ -109,24 +111,24 @@ const RestaurantsSection = () => {
                     alt={restaurant.name}
                     className="w-full h-64 md:h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute top-4 right-4 bg-restaurant-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                  <div className="absolute top-4 right-4 bg-gradient-to-r from-yellow-500 to-yellow-600 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
                     ⭐ {restaurant.rating}
                   </div>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{restaurant.name}</h3>
-                  <p className="text-gray-600 mb-4">{restaurant.description}</p>
+                  <h3 className="text-2xl font-bold text-yellow-800 mb-2">{restaurant.name}</h3>
+                  <p className="text-yellow-700 mb-4">{restaurant.description}</p>
                   
                   <div className="space-y-3 mb-4">
-                    <div className="flex items-center gap-2 text-gray-600">
+                    <div className="flex items-center gap-2 text-yellow-700">
                       <MapPin className="h-4 w-4" />
                       <span className="text-sm">{restaurant.location}</span>
                     </div>
-                    <div className="flex items-center gap-2 text-gray-600">
+                    <div className="flex items-center gap-2 text-yellow-700">
                       <Clock className="h-4 w-4" />
                       <span className="text-sm">{restaurant.hours}</span>
                     </div>
-                    <div className="flex items-center gap-2 text-gray-600">
+                    <div className="flex items-center gap-2 text-yellow-700">
                       <Phone className="h-4 w-4" />
                       <span className="text-sm">{restaurant.phone}</span>
                     </div>
@@ -134,20 +136,13 @@ const RestaurantsSection = () => {
                   
                   <div className="flex flex-wrap gap-2 mb-4">
                     {restaurant.specialties.map((specialty) => (
-                      <Badge key={specialty} variant="secondary" className="bg-restaurant-100 text-restaurant-700">
+                      <Badge key={specialty} variant="secondary" className="bg-gradient-to-r from-yellow-200 to-yellow-300 text-yellow-800 border border-yellow-400/30">
                         {specialty}
                       </Badge>
                     ))}
                   </div>
                   
-                  <div className="flex gap-2">
-                    <Button size="sm" className="bg-restaurant-600 hover:bg-restaurant-700 flex-1">
-                      View Menu
-                    </Button>
-                    <Button size="sm" variant="outline" className="flex-1">
-                      Book Table
-                    </Button>
-                  </div>
+                
                 </CardContent>
               </div>
             </Card>
@@ -155,48 +150,7 @@ const RestaurantsSection = () => {
         </div>
 
         {/* Events & Offers */}
-        <div className="grid md:grid-cols-2 gap-12">
-          <Card className="bg-white/90 backdrop-blur-sm">
-            <CardHeader>
-              <CardTitle className="text-2xl flex items-center gap-2 text-restaurant-700">
-                <Calendar className="h-6 w-6" />
-                Upcoming Events
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              {events.map((event, index) => (
-                <div key={index} className="border-l-4 border-restaurant-500 pl-4 py-2">
-                  <h3 className="font-bold text-gray-900">{event.title}</h3>
-                  <p className="text-sm text-gray-600">{event.restaurant}</p>
-                  <p className="text-sm text-restaurant-600 font-medium">{event.date} at {event.time}</p>
-                </div>
-              ))}
-              <Button className="w-full bg-restaurant-600 hover:bg-restaurant-700">
-                View All Events
-              </Button>
-            </CardContent>
-          </Card>
-
-          <Card className="bg-gradient-to-br from-restaurant-600 to-pink-600 text-white">
-            <CardHeader>
-              <CardTitle className="text-2xl">Loyalty Rewards</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="bg-white/20 rounded-lg p-4">
-                <h3 className="font-bold mb-2">Premium Member Benefits</h3>
-                <ul className="space-y-1 text-sm">
-                  <li>• 10% discount on all orders</li>
-                  <li>• Priority table reservations</li>
-                  <li>• Exclusive event invitations</li>
-                  <li>• Birthday special offers</li>
-                </ul>
-              </div>
-              <Button variant="secondary" className="w-full">
-                Join Loyalty Program
-              </Button>
-            </CardContent>
-          </Card>
-        </div>
+       
       </div>
     </section>
   );

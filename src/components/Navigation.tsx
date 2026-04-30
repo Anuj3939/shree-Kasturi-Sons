@@ -25,7 +25,7 @@ const Navigation = () => {
     { label: 'Construction', href: '/construction', color: 'builder' },
     { label: 'Restaurants', href: '/restaurants', color: 'restaurant' },
     { label: 'Electronics', href: '/electronics', color: 'electronics' },
-    { label: 'Eco Products', href: '/eco', color: 'eco' },
+    { label: 'Foods', href: '/foods', color: 'restaurant' },
     { label: 'Contact', href: '/contact', color: 'brand' },
   ];
 

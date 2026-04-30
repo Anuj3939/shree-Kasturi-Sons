@@ -39,7 +39,7 @@ const SolarSection = () => {
 
         {/* Company Info */}
         <div className="mb-12">
-          <Card className="bg-gradient-to-r from-solar-600 to-orange-600 text-white">
+          <Card className="bg-gradient-to-br from-yellow-500 via-yellow-600 to-yellow-700 text-white shadow-2xl border border-yellow-400/30" style={{boxShadow: '0 0 30px rgba(251, 191, 36, 0.4), 0 0 60px rgba(251, 191, 36, 0.2)'}}>
             <CardContent className="p-8">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
@@ -60,6 +60,7 @@ const SolarSection = () => {
                   <div className="space-y-2">
                     <p className="text-lg font-semibold">Ishitva Soni</p>
                     <p className="text-lg">📞 9977888098</p>
+                    <p className="text-lg">address: '122, 1st floor, mechanic nagar, near new Bombay disposal, Indore, (452002)'</p>
                   </div>
                 </div>
               </div>
@@ -68,110 +69,40 @@ const SolarSection = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-start">
-          {/* Upload Interface */}
-          <Card className="bg-white/10 backdrop-blur-md shadow-xl border border-white/20">{/* Dark card */}
-            <CardHeader>
-              <CardTitle className="text-2xl flex items-center gap-2 text-solar-700">
-                <Upload className="h-6 w-6" />
-                Bill Analysis
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="border-2 border-dashed border-solar-300 rounded-lg p-8 text-center hover:border-solar-500 transition-colors">
-                <input
-                  type="file"
-                  accept=".pdf,.png,.jpg,.jpeg"
-                  onChange={handleFileUpload}
-                  className="hidden"
-                  id="bill-upload"
-                />
-                <label htmlFor="bill-upload" className="cursor-pointer">
-                  <FileText className="h-12 w-12 text-solar-500 mx-auto mb-4" />
-                  <p className="text-lg font-medium text-gray-700 mb-2">
-                    Upload Your Electricity Bill
-                  </p>
-                  <p className="text-gray-500">
-                    PDF, PNG, JPG up to 10MB
-                  </p>
-                </label>
-              </div>
-
-              {uploadedFile && (
-                <div className="bg-solar-50 p-4 rounded-lg">
-                  <p className="text-sm text-solar-700">
-                    <strong>File uploaded:</strong> {uploadedFile.name}
-                  </p>
-                  <p className="text-sm text-gray-600 mt-1">
-                    Analyzing your energy consumption...
-                  </p>
-                </div>
-              )}
-
-              {analysisResult && (
-                <div className="bg-gradient-to-r from-solar-500 to-orange-500 text-white p-6 rounded-lg">
-                  <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                    <Calculator className="h-5 w-5" />
-                    Analysis Results
-                  </h3>
-                  <div className="grid grid-cols-2 gap-4 text-sm">
-                    <div>
-                      <p className="opacity-90">Monthly Usage</p>
-                      <p className="text-2xl font-bold">{analysisResult.monthlyUsage} kWh</p>
-                    </div>
-                    <div>
-                      <p className="opacity-90">Recommended Size</p>
-                      <p className="text-2xl font-bold">{analysisResult.recommendedSize} kW</p>
-                    </div>
-                    <div>
-                      <p className="opacity-90">Estimated Cost</p>
-                      <p className="text-2xl font-bold">₹{analysisResult.estimatedCost.toLocaleString()}</p>
-                    </div>
-                    <div>
-                      <p className="opacity-90">Annual Savings</p>
-                      <p className="text-2xl font-bold">₹{analysisResult.savings.toLocaleString()}</p>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              <Button className="w-full bg-solar-600 hover:bg-solar-700" size="lg">
-                Get Detailed Quote
-              </Button>
-            </CardContent>
-          </Card>
+         
 
           {/* Benefits & Features */}
-          <div className="space-y-8">
-            <Card className="bg-white/80 backdrop-blur-sm">
+          <div className="grid md:grid-cols-2 gap-8 md:col-span-2 w-full">
+            <Card className="h-full bg-gradient-to-br from-yellow-50 via-yellow-100 to-yellow-200 border border-yellow-300/50 shadow-2xl backdrop-blur-sm" style={{boxShadow: '0 0 25px rgba(251, 191, 36, 0.2), 0 0 50px rgba(251, 191, 36, 0.1)'}}>
               <CardContent className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Solar?</h3>
+                <h3 className="text-2xl font-bold text-yellow-800 mb-4">Why Choose Solar?</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-solar-500 rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-yellow-600 rounded-full mt-2"></div>
                     <div>
-                      <strong className="text-gray-900">Reduce Bills by 90%</strong>
-                      <p className="text-gray-600">Significantly lower your monthly electricity costs</p>
+                      <strong className="text-yellow-800">Reduce Bills by 90%</strong>
+                      <p className="text-yellow-700">Significantly lower your monthly electricity costs</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-solar-500 rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-yellow-600 rounded-full mt-2"></div>
                     <div>
-                      <strong className="text-gray-900">25-Year Warranty</strong>
-                      <p className="text-gray-600">Long-term protection for your investment</p>
+                      <strong className="text-yellow-800">25-Year Warranty</strong>
+                      <p className="text-yellow-700">Long-term protection for your investment</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-solar-500 rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-yellow-600 rounded-full mt-2"></div>
                     <div>
-                      <strong className="text-gray-900">Government Subsidies</strong>
-                      <p className="text-gray-600">Take advantage of available incentives</p>
+                      <strong className="text-yellow-800">Government Subsidies</strong>
+                      <p className="text-yellow-700">Take advantage of available incentives</p>
                     </div>
                   </li>
                 </ul>
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-to-br from-solar-600 to-orange-600 text-white">
+            <Card className="h-full bg-gradient-to-br from-yellow-500 via-yellow-600 to-yellow-700 text-white shadow-2xl border border-yellow-400/30" style={{boxShadow: '0 0 30px rgba(251, 191, 36, 0.4), 0 0 60px rgba(251, 191, 36, 0.2)'}}>
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-4">Installation Process</h3>
                 <div className="space-y-3 text-sm">

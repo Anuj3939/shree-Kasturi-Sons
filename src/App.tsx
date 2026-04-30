@@ -9,10 +9,12 @@ import Gold from "./pages/Gold";
 import Construction from "./pages/Construction";
 import Restaurants from "./pages/Restaurants";
 import Electronics from "./pages/Electronics";
-import Eco from "./pages/Eco";
+import Foods from "./pages/Foods";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import About from "./pages/About";
+import Privacy from "./pages/Privacy";
+import Cookies from "./pages/Cookies";
 
 const queryClient = new QueryClient();
 
@@ -30,8 +32,10 @@ const App = () => (
           <Route path="/construction" element={<Construction />} />
           <Route path="/restaurants" element={<Restaurants />} />
           <Route path="/electronics" element={<Electronics />} />
-          <Route path="/eco" element={<Eco />} />
+          <Route path="/foods" element={<Foods />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/cookies" element={<Cookies />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

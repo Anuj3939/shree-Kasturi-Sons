@@ -5,20 +5,13 @@ import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-transparent overflow-hidden">
-      {/* Background Animation - adjusted for dark theme */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-yellow-400/20 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-float"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-yellow-300/20 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-float" style={{animationDelay: '2s'}}></div>
-        <div className="absolute top-40 left-1/2 w-80 h-80 bg-yellow-500/20 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-float" style={{animationDelay: '4s'}}></div>
-      </div>
-
+    <section className="relative min-h-screen flex items-center justify-center">
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <div className="mb-8 flex justify-center">
           <img 
             src="/lovable-uploads/8a45c65e-34e6-4a22-9ead-4864adce1de8.png" 
             alt="Shree Kasturi & Son's Logo" 
-            className="h-100 md:h-108 w-auto"
+            className="h-40 md:h-48 w-auto animate-wobble"
           />
         </div>
         <h1 className="text-5xl md:text-7xl font-bold font-vintage mb-6 text-white animate-fade-in">
@@ -33,11 +26,12 @@ const HeroSection = () => {
               Contact Us Today
             </Button>
           </Link>
-          <Link to="#business-verticals">
-            <Button variant="outline" size="lg" className="text-lg px-8 py-3 border-2 border-white/50 text-white hover:bg-white/10 hover:border-white">
+          <Link to="/contact">
+            <Button size="lg" className="bg-yellow-600 hover:bg-yellow-700 text-white text-lg px-8 py-3">
               Explore Our Services
             </Button>
           </Link>
+          
         </div>
       </div>
 

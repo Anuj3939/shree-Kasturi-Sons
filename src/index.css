@@ -99,3 +99,48 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  @keyframes scroll-horizontal {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes scroll-vertical {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-50%);
+    }
+  }
+
+  @keyframes wobble {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .animate-scroll-horizontal {
+    animation: scroll-horizontal 20s linear infinite;
+  }
+
+  .animate-scroll-vertical {
+    animation: scroll-vertical 20s linear infinite;
+  }
+
+  .animate-reverse {
+    animation-direction: reverse;
+  }
+
+  .animate-wobble {
+    animation: wobble 3s ease-in-out infinite;
+  }
+}
