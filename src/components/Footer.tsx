@@ -71,7 +71,7 @@ const Footer = () => {
             <div className="space-y-2 text-gray-300">
               <p>122, 1st floor, mechanic nagar, near new Bombay disposal, Indore, (452002)</p>
               <p>Phone: +91 6262633990</p>
-              <p>Email: info@shreekasturi.com</p>
+              <p>Email: info@shreekasturiandsons.com</p>
             </div>
           </div>
         </div>
